@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2
 
 # Load the YOLOv8 face model
-model = YOLO("yolov8l_100e.pt")  # Or replace with your model path
+model = YOLO("yolov8l_100e.pt")
 
 cap = cv2.VideoCapture("test.mp4")
 
@@ -26,7 +26,7 @@ while cap.isOpened():
     # Show the frame
     cv2.imshow("Face Detection", frame)
 
-    # Break loop on 'q' key press
+
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
